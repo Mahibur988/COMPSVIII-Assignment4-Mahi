@@ -41,18 +41,26 @@ Your task is to containerize this existing application using Docker. You need to
 - To build the docker image run the command:
 
 ```bash
-
+docker build -t assignment4-mahi .
 ```
 
 - To run your docker container in port 3000 run the command:
 
 ```bash
-
+docker run -d -p 3000:3000 assignment4-mahi
 ```
+### Application Screenshot
+
+![Application running at localhost:3000](images/localhost-3000.png)
+
+### API Status Screenshot
+
+![API response at localhost:3000/api/status](images/api-status.png)
 
 ## Reflection Question
 **Answer the following question in the space below**: How does containerization with Docker differ from using virtual machines, and why might a development team choose Docker containers over VMs for deploying applications like the one you just containerized?
 
+Docker containers and virtual machines are different because containers share the computer's operating system, while virtual machines have their own operating system. Containers are usually faster and use less space. I think a development team might choose Docker because it is easier to run and share applications on different computers. In this assignment, I was able to run the Node.js application without installing Node.js on my computer. Docker also helps avoid problems like "it works on my machine."
 
 
 ## Application Requirements for Docker
